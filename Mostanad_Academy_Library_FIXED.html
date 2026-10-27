@@ -1,0 +1,1860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Material Document Control | Mostanad Academy</title>
+  <meta http-equiv="refresh" content="0; url=HTML/Mostanad%20Academy%20Library.html">
+  <link rel="canonical" href="HTML/Mostanad%20Academy%20Library.html">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- CSS FILE -->
+
+<link rel="stylesheet" href="HTML/footer.css">
+<link rel="stylesheet" href="HTML/list.css">
+
+
+    <style>
+
+
+
+
+/* ===== THEME ===== */
+:root{
+  --bg:#ffffff;
+  --text:#0f172a;
+  --card:#f1f5f9;
+  --primary:#2563eb;
+  --green:#22c55e;
+}
+
+
+body.dark{
+  --bg:#0f172a;
+  --text:#ffffff;
+  --card:#1e293b;
+}
+
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.4s;
+}
+
+
+/* ===== DARK TEXT FIX ===== */
+body.dark p,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark li,
+body.dark a{
+  color:#fff !important;
+ 
+}
+/* ===== NAVBAR ===== */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:999;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  transition:0.3s;
+   font-weight: bold;
+}
+
+
+body.dark .navbar{
+  background:rgba(15,23,42,0.9);
+}
+
+
+/* ===== NAV HOVER GREEN BORDER ===== */
+.navbar .nav-link{
+  padding:8px 12px;
+  border-radius:10px;
+  transition:0.3s;
+  border:1px solid transparent;
+}
+/* NAVBAR HOVER COLOR */
+
+
+.navbar .nav-link:hover{
+  border:1px solid #00e1ffe8; /* اللون الجديد */
+  color:#00d9fff8 !important;
+}
+
+
+
+
+
+body.dark .card p,
+body.dark .card h3,
+body.dark .card li,
+body.dark .hero-card p,
+body.dark .hero-card h3,
+body.dark .hero-card li{
+  color:#ec0a0a !important;
+}
+/* TITLES COLOR IN DARK MODE ONLY */
+
+
+body.dark h1 span,
+body.dark h2,
+body.dark h3,
+body.dark h1
+{
+
+  color:#38bdf3 !important;
+}
+
+
+
+  /* ================= NAVBAR ================= */
+
+
+  .custom-navbar {
+
+
+      background: rgba(225, 230, 235, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #eedf06;
+      z-index: 999;
+      padding-top: 12px;
+      padding-bottom: 12px;
+
+
+  }
+
+
+        .custom-navbar .navbar-brand {
+
+
+            color: rgb(207, 11, 11) !important;
+
+
+        }
+
+
+        .brand-text h2 {
+
+
+            font-size: 24px;
+            font-weight: 700;
+            color: rgb(13, 12, 12);
+
+
+        }
+
+
+        .brand-text span {
+
+
+            color: #0c6ee6;
+            font-size: 14px;
+
+
+        }
+
+
+        .logo-img {
+
+
+            object-fit: cover;
+            border: 2px solid rgba(255,255,255,0.2);
+
+
+        }
+
+
+        .custom-navbar .nav-link {
+
+
+            color: #020a13 !important;
+            font-weight: 500;
+            margin-left: 10px;
+            padding: 10px 18px !important;
+            border-radius: 12px;
+            transition: 0.3s;
+
+
+        }
+
+
+        .custom-navbar .nav-link:hover {
+
+
+            background: #e1de09;
+            color: #0d1b2a !important;
+            font-weight: bold;
+        }
+
+
+        .navbar-toggler {
+
+
+            border: none;
+            color: rgb(39, 3, 3);
+            font-size: 24px;
+
+
+        }
+
+
+        .navbar-toggler:focus {
+
+
+            box-shadow: none;
+
+
+        }
+
+
+        /* ================= SIDEBAR ================= */
+
+
+        .sidebar {
+
+
+            width: 280px;
+            height: 100vh;
+            position: fixed;
+            top: 85px;
+            left: 0;
+            background: #0d1b2a;
+            color: white;
+            padding: 30px 20px;
+            overflow-y: auto;
+
+
+        }
+
+
+        .logo {
+
+
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+
+
+        }
+
+
+        .sidebar h6 {
+
+
+            color: #9ca3af;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 13px;
+
+
+        }
+
+
+        .sidebar a {
+
+
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 14px 18px;
+            border-radius: 12px;
+            margin-bottom: 10px;
+            transition: 0.3s;
+            font-weight: 500;
+
+
+        }
+
+
+        .sidebar a:hover {
+
+
+            background: #577b8d;
+
+
+        }
+
+
+        /* ================= MAIN ================= */
+
+
+        .main {
+
+
+            margin-left: 280px;
+            padding: 120px 30px 30px;
+
+
+        }
+       
+       
+       
+
+        /* ================= HERO ================= */
+
+
+        .welcome {
+
+
+            background: linear-gradient(to right, #0d1b2a, #1b263b);
+            color: white;
+            padding: 60px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+
+
+        }
+
+
+        .welcome h1 {
+
+
+            font-size: 50px;
+            font-weight: bold;
+
+
+        }
+
+
+        .welcome p {
+
+
+            color: #d6d6d6;
+            margin-top: 20px;
+            max-width: 700px;
+
+
+        }
+
+
+        /* ================= TITLES ================= */
+
+
+        .section-title {
+
+
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 30px;
+
+
+        }
+
+
+        /* ================= FOLDER CARD ================= */
+
+
+        .folder-card {
+
+
+            background: #fff;
+            padding: 30px;
+            border-radius: 25px;
+            transition: 0.3s;
+            height: 100%;
+            color: #010d12;
+
+
+        }
+
+
+        .folder-card:hover {
+
+
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(178, 204, 52, 0.08);
+
+
+        }
+
+
+        .folder-icon {
+
+
+            width: 70px;
+            height: 70px;
+            background: #87834c2d;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+
+
+        }
+
+
+        /* ================= FILE CARD ================= */
+
+
+        .file-card {
+
+
+            background: white;
+            border-radius: 25px;
+            padding: 25px;
+            transition: 0.3s;
+            height: 100%;
+
+
+        }
+
+
+        .file-card:hover {
+
+
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+
+        }
+
+
+        .file-type {
+
+
+            background: #edf2ff;
+            color: #0d1b2a;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+
+
+        }
+
+        /* ================= BUTTONS ================= */
+
+
+        .btn-dark-custom {
+
+
+            background: #0d1b2a;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+
+
+        }
+
+
+        .btn-outline-custom {
+
+
+            border: 2px solid #0d1b2a;
+            color: #0d1b2a;
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            background: transparent;
+
+
+        }
+
+
+        /* ================= STATS ================= */
+
+
+        .stats-box {
+
+
+            background: white;
+            padding: 30px;
+            border-radius: 25px;
+            text-align: center;
+
+
+        }
+
+
+        .stats-box h2 {
+
+
+            font-size: 40px;
+            font-weight: bold;
+
+
+        }
+
+
+        .stats-box p {
+
+
+            color: gray;
+
+
+        }
+
+
+        body.dark .stats-box{
+            
+
+            background: #0d1722 ;
+            color: rgb(245, 241, 241);
+
+
+        }
+                 body.dark .folder-card {
+      background: #0d1722;
+      padding: 30px;
+      border-radius: 25px;
+      transition: 0.3s;
+      height: 100%;
+      color: #d8e2e5;
+       }
+     body.dark .file-card{
+      background: #0d1722 ;
+     height: 100%;
+     color: #38bdf3;
+     }
+ body.dark .file-type
+   {
+     background: rgb(53, 44, 44);
+     color: #eaf50e;
+     }
+        /* ================= FOOTER ================= */
+        .custom-footer {
+
+
+            background: #0d1b2a;
+            color: white;
+            padding: 70px 0 30px;
+            margin-left: 280px;
+
+
+        }
+        .custom-footer h3,
+        .custom-footer h5 {
+
+
+            font-weight: bold;
+            margin-bottom: 20px;
+
+
+        }
+        .custom-footer p {
+
+
+            color: #cbd5e1;
+            line-height: 1.8;
+
+
+        }
+        .footer-links {
+
+
+            list-style: none;
+            padding: 0;
+
+
+        }
+        .footer-links li {
+
+
+            margin-bottom: 12px;
+
+
+        }
+        .footer-links a {
+
+
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.3s;
+
+
+        }
+        .footer-links a:hover {
+
+
+            color: white;
+            padding-left: 5px;
+
+
+        }
+        .custom-footer hr {
+
+
+            border-color: rgba(255,255,255,0.1);
+            margin: 40px 0 20px;
+
+
+        }
+        .footer-bottom {
+
+
+            text-align: center;
+            color: #94a3b8;
+
+
+        }
+
+        /* ================= MOBILE ================= */
+
+
+        @media(max-width:992px){
+
+
+            .sidebar {
+
+
+                display: none;
+
+
+            }
+
+
+            .main {
+
+
+                margin-left: 0;
+                padding-top: 120px;
+
+
+            }
+
+
+            .custom-footer {
+
+
+                margin-left: 0;
+                padding: 50px 20px;
+
+
+            }
+
+
+            .welcome {
+
+
+                padding: 30px;
+
+
+            }
+
+
+            .welcome h1 {
+
+
+                font-size: 35px;
+
+
+            }
+
+
+            .brand-text h2 {
+
+
+                font-size: 18px;
+
+
+            }
+
+
+        }
+
+
+.doc-card{
+    background:#1e293b;
+    border-radius:20px;
+    padding:30px 15px;
+    text-align:center;
+    cursor:pointer;
+    transition:.4s;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+
+.doc-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(56,189,248,.25);
+    border-color:#38bdf8;
+}
+
+
+.doc-icon{
+    font-size:50px;
+    margin-bottom:15px;
+}
+
+
+.doc-card h4{
+    color:#38bdf8;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+
+.doc-card span{
+    color:#cbd5e1;
+    font-size:13px;
+    display:block;
+}
+
+
+
+    .sidebar button{
+  background: none !important;
+  color: #fff;
+  border: none;
+}
+    
+/* DROPDOWN FIX */
+.dropdown-btn{
+width:100%;
+text-align:left;
+padding:14px 18px;
+cursor:pointer;
+border-radius:12px;
+transition:.3s;
+font-weight:500;
+}
+.dropdown-container{display:none;padding-left:15px;}
+.dropdown-btn.active{background:#577b8d;}
+
+</style>
+
+</head>
+<body>
+  
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg px-3 shadow-sm">
+  
+  <a class="navbar-brand d-flex align-items-center" href="#">
+           <img src="IMG/logo.png" 
+                alt="Logo"
+                width="90"
+                height="85"
+                class="me-2 rounded-circle">
+     </a>
+
+  <a class="navbar-brand fw-bold">
+    <h2>
+        Mostanad Academy | مستند أكاديمي
+
+    </h2>
+  </a>
+ <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+   ☰
+ </button>
+
+  <div class="collapse navbar-collapse" id="nav">
+    <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+  <li class="nav-item"><a class="nav-link" href="HTML/Document Controller Plan.html">Document Plan</a></li>
+  <li class="nav-item"><a class="nav-link" href="HTML/Archiving System.html">Archive System</a></li>
+  <li class="nav-item"><a class="nav-link" href="HTML/Excel Automation Roadmap.html">Excel Roadmap</a></li>
+  <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="#" onclick="toggleTheme(this)">Dark Mode</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+</nav>
+
+
+ 
+    <br>
+    <!-- SIDEBAR -->
+
+   <div class="sidebar ">
+     <div class="logo">
+    Library Document
+    </div>
+     <h6>Library</h6>
+     <button class="dropdown-btn  ">📁 Contractual Documents </button>
+ <div class="dropdown-container">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+  <button class="dropdown-btn  ">📁 Correspondence </button>
+   <div class="dropdown-container">
+    <a href="#">📄 Letters </a>
+    <a href="#">📄 Transmittals  </a>
+    <a href="#">📄 Minutes of Meeting  </a>
+    <a href="#">📄 Emails </a>
+    <a href="#">📄 Notifications </a>
+    </div>
+  <button class="dropdown-btn  ">📁 Reports </button>
+   <div class="dropdown-container">
+    <a href="#">📄 Daily Report</a>
+    <a href="#">📄 Weekly Report</a>
+    <a href="#">📄 Monthly Report</a>
+    </div>
+    <button class="dropdown-btn  ">📁 Technical Documents </button>
+     <div class="dropdown-container">
+        <a href="#">📄 Shop Drawings  </a>
+        <a href="#">📄 As-Built Drawings  </a>
+        <a href="#">📄 Technical Specifications </a>
+        <a href="#">📄 Requests for Information</a>
+        <a href="#">📄 Requests for Proposal</a>
+        <a href="#">📄 Requests for Approval</a>
+        <a href="#">📄 Monthly Payment Certificates</a>
+        <a href="#">📄 Progress</a>
+        <a href="#">📄 Quantity Surveying</a>
+       
+      </div>
+    <button class="dropdown-btn  ">📁 Quality Control </button>
+    <div class="dropdown-container">
+    <a href="HTML/iframe/01 - Inspection Request (I.R)/IR.pdf">📄 Inspection Requests </a>
+    <a href="#">📄 Inspection Test Plan </a>
+    <a href="#">📄 Non-Conformance Report </a>
+    <a href="#">📄 Corrective Action Report </a>
+    <a href="#">📄 Quality Procedures </a>
+    <a href="#">📄 Audit Reports </a>
+    <a href="#">📄 Material Submittals </a>
+    <a href="#">📄 Method Statements </a>
+    <a href="#">📄 Reports </a>
+    <a href="#">📄 Material Inspection Requests </a>
+    <a href="#">📄 Concrete Pouring Request </a>
+    <a href="#">📄 Test Result </a>
+
+
+    </div>
+ <button class="dropdown-btn  ">📁 Administrative Documents </button>
+ <div class="dropdown-container">
+ <a href="#">📄 CVs </a>
+ <a href="#">📄 Timesheets  </a>
+ <a href="#">📄 Permits </a>
+ </div>
+  ------------------------------------------------------------------------------------------------------------------------
+  <h6>
+    Download log's and Format
+  </h6><br>
+    <button class="dropdown-btn  ">📗 Logs & Registers Excel </button>
+    <div class="dropdown-container">
+      <a href="#">Download All log's</a>
+      <a href="#">Log CDR</a>
+      <a href="#">Log CPR</a>
+      <a href="#">Log DS</a>
+      <a href="#">Log IR</a>
+      <a href="#">Log MIR</a>
+      <a href="#">Log DS</a>
+      <a href="#">Log IR</a>
+      <a href="#">Log MIR</a>
+      <a href="#">Log MS</a>
+      <a href="#">Log MOS</a>
+      <a href="#">Log NCR</a>
+      <a href="#">Log QS</a>
+      <a href="#">Log RFA</a>
+      <a href="#">Log RFI</a>
+      <a href="#">Log RFP</a>
+      <a href="#">Log SI</a>
+      <a href="#">Log TRT</a>
+    </div>
+    <div>
+            <button class="dropdown-btn">📘 Templates Word</button>
+    <div class="dropdown-container">
+        <a href="HTML/Download All/format word.rar">Download All format</a>
+<a href="HTML/iframe/02 - Daily Reports/CDR.docx">CDR CONTRACTORS DAILY REPORT</a>
+ <a href="HTML/iframe/11 - Concrete Pouring Request (CPR)/CPR.docx">CPR CONCRETE POURING REQUEST</a>
+ <a href="HTML/iframe/03 - Document Submittal (D.S)/DS.docx">DS DOCUMENT SUBMITTAL</a>
+ <a href="HTML/iframe/01 - Inspection Request (I.R)/IR.docx">IR INSPECTION REQUEST</a>
+ <a href="HTML/iframe/14 - Materials Inspection Request (M.I.R)/MIR.docx">MIR MATERIAL INSPECTION REQUEST</a>
+ <a href="HTML/iframe/08 - Material Submittal (M.S)/MS.docx">MS MATERIAL SUBMITTAL</a>
+ <a href="HTML/iframe/04 - Method Of Statement (M.O.S)/MOS.docx">MOS METHOD of STATEMENT</a>
+ <a href="HTML/iframe/02 - Shop Drawing (S.D)/SD.docx">Shop Drawing</a>
+ <a href="HTML/iframe/10 - Quantities Submittal (Q.S)/QS.docx">QS QUANTITY SURVEY</a>
+ <a href="HTML/iframe/05 - Request For Approval (R.F.A)/RFA.docx">RFA REQUEST FOR Approval</a>
+ <a href="HTML/iframe/07 - Request For Information (R.F.I)/RFI.docx">RFI REQUEST FOR INFORMATION</a>
+ <a href="HTML/iframe/06 - Request For Proposal (R.F.P)/RFP.docx">RFP REQUEST0 FOR PROPOSAL</a>
+ <a href="#">SI SITE INSTRUCTION</a>
+ <a href="HTML/iframe/09 - Test Result (TRT)/TRT.docx">TRT TEST REPORT</a>
+    </div>
+
+
+
+     <button class="dropdown-btn">📕 Templates PDF</button>
+      <div class="dropdown-container">
+      <a href="HTML/Download All/format pdf.rar">Download All format</a>
+      <a href="HTML/iframe/02 - Daily Reports/CDR.pdf" target="_blank" >CDR CONTRACTORS DAILY REPORT</a>
+      <a href="HTML/iframe/11 - Concrete Pouring Request (CPR)/CPR.pdf" target="_blank">CPR CONCRETE POURING REQUEST</a>
+      <a href="HTML/iframe/03 - Document Submittal (D.S)/DS.pdf"target="_blank">DS DOCUMENT SUBMITTAL</a>
+      <a href="HTML/iframe/01 - Inspection Request (I.R)/IR.pdf" target="_blank" >IR INSPECTION REQUEST</a>
+      <a href="HTML/iframe/14 - Materials Inspection Request (M.I.R)/MIR.pdf"target="_blank">MIR MATERIAL INSPECTION REQUEST</a>
+      <a href="HTML/iframe/08 - Material Submittal (M.S)/MS.pdf"target="_blank">MS MATERIAL SUBMITTAL</a>
+      <a href="HTML/iframe/04 - Method Of Statement (M.O.S)/MOS.pdf" target="_blank">MOS METHOD of STATEMENT</a>
+      <a href="HTML/iframe/02 - Shop Drawing (S.D)/SD.PDF"target="_blank">Shop Drawing</a>
+      <a href="HTML/iframe/10 - Quantities Submittal (Q.S)/QS.pdf"target="_blank">QS QUANTITY SURVEY</a>
+      <a href="HTML/iframe/05 - Request For Approval (R.F.A)/RFA.pdf"target="_blank">RFA REQUEST FOR Approval</a>
+      <a href="HTML/iframe/07 - Request For Information (R.F.I)/RFI.pdf"target="_blank">RFI REQUEST FOR INFORMATION</a>
+      <a href="HTML/iframe/06 - Request For Proposal (R.F.P)/RFP.pdf"target="_blank">RFP REQUEST0 FOR PROPOSAL</a>
+      <a href="#"target="_blank">SI SITE INSTRUCTION</a>
+      <a href="HTML/iframe/09 - Test Result (TRT)/TRT.pdf"target="_blank">TRT TEST REPORT</a>
+    </div>
+  </div>
+
+</div>
+<hr>
+
+    <!-- MAIN -->
+
+
+    <div class="main">
+
+        <!-- HERO -->
+
+        <div class="welcome">
+
+
+            <h1>
+                Welcome to Material Document Control
+            </h1>
+
+
+            <p>
+
+                Professional digital library for Document Controllers.
+                Browse templates, procedures, logs, registers,
+                Aconex workflows, QA/QC forms,
+                infrastructure documents, and EDMS resources.
+            </p>
+
+
+        </div>
+
+        <!-- STATS -->
+
+        <div class="row g-4 mb-5">
+
+
+            <div class="col-md-3">
+
+
+                <div class="stats-box">
+
+
+                    <h2>140+</h2>
+
+
+                    <p>Templates</p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-3">
+
+
+                <div class="stats-box">
+
+
+                    <h2>341+</h2>
+
+
+                    <p>Downloads</p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-3">
+
+
+                <div class="stats-box">
+
+
+                    <h2>100+</h2>
+
+
+                    <p>Logs & Registers</p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-3">
+
+
+                <div class="stats-box">
+
+
+                    <h2>120+</h2>
+
+
+                    <p>formats</p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <!-- MAIN SECTIONS -->
+
+            
+        <h2 class="text-center section-title">Library Document </h2>
+
+        <div class="row g-4 mb-5">
+
+
+            <div class="col-md-4">
+
+
+                <div class="folder-card">
+
+
+                    <div class="folder-icon">
+                         📥 
+                    </div>
+                      <h4>   📁   Document Acronyms</h4>
+                    <p>
+                        Vendor documents, MIRs, RFIs,
+                        technical submittals, shop drawings,
+                        and method statements.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-4">
+
+
+                <div class="folder-card">
+
+
+                    <div class="folder-icon">
+                        📤
+                    </div>
+                    <h4>  
+                          📁 Format Documents
+                    </h4>
+
+
+                    <p>
+                        Transmittals, client submissions,
+                        consultant approvals, and official letters.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-md-4">
+
+
+                <div class="folder-card">
+
+
+                    <div class="folder-icon">
+                        📊
+                    </div>
+
+
+                    <h4>
+                      📗 Logs & Registers
+                    </h4>
+
+
+                    <p>
+                        MS, IR, MIR, NCR, 
+                        QS, SD, DS, SI, VO,
+                        RFI, RFA, RFP, 
+                        RFI Register, and drawing registers.
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        
+
+<section class="container py-5">
+
+
+    <h2 class="Format text-center mb-5">
+        🏗️ Format Documents
+    </h2>
+
+
+    <div class="row g-4">
+
+<!-- IR -->
+        <div class="col-lg-3 col-md-6">
+            <div class="doc-card" data-bs-toggle="modal" data-bs-target="#irModal">
+                <div class="doc-icon">📄</div>
+                <h4>IR</h4>
+                <span>Inspection Request</span>
+            </div>
+        </div>
+             <!-- SD -->
+    <div class="col-lg-3 col-md-6">
+        <div class="doc-card" data-bs-toggle="modal" data-bs-target="#SDModal">
+            <div class="doc-icon">📄</div>
+            <h4>SD</h4>
+            <span>Shop Drawing </span>
+        </div>
+    </div>
+         <!-- MIR -->
+    <div class="col-lg-3 col-md-6">
+        <div class="doc-card" data-bs-toggle="modal" data-bs-target="#mMirModal">
+            <div class="doc-icon">📄</div>
+            <h4>MIR</h4>
+            <span>Material Inspection Request</span>
+        </div>
+    </div>
+    <!-- RFI -->
+    <div class="col-lg-3 col-md-6">
+        <div class="doc-card" data-bs-toggle="modal" data-bs-target="#rfiModal">
+            <div class="doc-icon">📄</div>
+            <h4>RFI</h4>
+            <span>Request For Information</span>
+        </div>
+    </div>
+      <!-- RFP -->
+     <div class="col-lg-3 col-md-6">
+     <div class="doc-card" data-bs-toggle="modal" data-bs-target="#rfPModal">
+         <div class="doc-icon">📄</div>
+         <h4>RFP</h4>
+         <span>Request For Proposal</span>
+     </div>
+ </div>
+   <!-- RFA -->
+  <div class="col-lg-3 col-md-6">
+     <div class="doc-card" data-bs-toggle="modal" data-bs-target="#rfaModal">
+         <div class="doc-icon">📄</div>
+         <h4>RFA</h4>
+         <span>Request For Approval</span>
+     </div>
+ </div>
+    <!-- MS -->
+    <div class="col-lg-3 col-md-6">
+        <div class="doc-card" data-bs-toggle="modal" data-bs-target="#msModal">
+            <div class="doc-icon">📄</div>
+            <h4>MS</h4>
+            <span>Material Submittal </span>
+        </div>
+    </div>
+      <!-- DS -->
+    <div class="col-lg-3 col-md-6">
+        <div class="doc-card" data-bs-toggle="modal" data-bs-target="#DSModal">
+            <div class="doc-icon">📄</div>
+            <h4>DS</h4>
+            <span>Document Submittal</span>
+        </div>
+    </div> 
+     <!-- AS-Built -->
+     <div class="col-lg-3 col-md-6">
+         <div class="doc-card">
+             <div class="doc-icon">📄</div>
+             <h4>AS</h4>
+             <span>As Built </span>
+         </div>
+     </div>
+      <!-- qs -->
+   <div class="col-lg-3 col-md-6">
+       <div class="doc-card" data-bs-toggle="modal" data-bs-target="#qsModal">
+           <div class="doc-icon">📄</div>
+           <h4>QS</h4>
+           <span>Quantity Survey </span>
+       </div>
+   </div>
+      <!-- CPR -->
+   <div class="col-lg-3 col-md-6">
+       <div class="doc-card" data-bs-toggle="modal" data-bs-target="#cprModal">
+           <div class="doc-icon">📄</div>
+           <h4>CPR</h4>
+           <span>Concrete Pouring Request</span>
+       </div>
+   </div>
+        <!-- MOS -->
+  <div class="col-lg-3 col-md-6">
+      <div class="doc-card" data-bs-toggle="modal" data-bs-target="#MOSModal">
+          <div class="doc-icon">📄</div>
+          <h4>MOS</h4>
+          <span>Method Of Statement</span>
+      </div>
+  </div>
+          <!-- TRT -->
+<div class="col-lg-3 col-md-6">
+    <div class="doc-card" data-bs-toggle="modal" data-bs-target="#TRTModal">
+        <div class="doc-icon">📄</div>
+        <h4>TRT</h4>
+        <span>Test Result</span>
+    </div>
+</div>
+          <!-- NCR -->
+<div class="col-lg-3 col-md-6">
+    <div class="doc-card" data-bs-toggle="modal" data-bs-target="#NCRModal">
+        <div class="doc-icon">📄</div>
+        <h4>NCR</h4>
+        <span>Non-Conformance-Report</span>
+    </div>
+</div>
+          <!-- TRA -->
+<div class="col-lg-3 col-md-6">
+    <div class="doc-card" data-bs-toggle="modal" data-bs-target="#TRAModal">
+        <div class="doc-icon">📄</div>
+        <h4>TRA</h4>
+        <span>Transmittal </span>
+    </div>
+</div>
+
+
+
+<!-- IR Modal -->
+<div class="modal fade" id="irModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Inspection Request (IR)</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+
+                <h4>Inspection Request</h4>
+
+
+                <p>
+                 يستخدم لطلب فحص الأعمال المنفذة من الاستشاري 
+                </p>
+
+
+                <!-- PDF -->
+                  <iframe src="HTML/iframe/01 - Inspection Request (I.R)/IR.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SD Modal -->
+<div class="modal fade" id="SDModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Shop Drawing (SD)</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+
+
+
+                <h4>Shop Drawing </h4>
+
+
+
+
+                <p>
+                   اعتماد الرسومات قبل التنفيذ 
+                </p>
+
+
+
+
+                <!-- PDF -->
+                <iframe src="HTML/iframe/02 - Shop Drawing (S.D)/SD.PDF"
+                        width="100%"
+                        height="500">
+                </iframe>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MIR Modal -->
+<div class="modal fade" id="mMirModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                    <h5>Material Inspection Request (MIR)</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+
+
+                  <h4>Material Inspection Request</h4>
+                    <p>
+                     MS يستخدم في تقديم توريد المواد بعد اعتماد العينه في مستند .
+                    </p>
+                <!-- PDF -->
+                    <Iframe src="HTML/iframe/14 - Materials Inspection Request (M.I.R)/MIR.pdf" width="100%" height="500" >
+
+                    </Iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- RFI Modal -->
+<div class="modal fade" id="rfiModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Request For Information</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Request For Information </h4>
+                <p>
+                  الاستفسار عن معلومات غير واضحه
+                </p>
+                <!-- PDF -->
+                <iframe src="HTML/iframe/07 - Request For Information (R.F.I)/RFI.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- RFP Modal -->
+<div class="modal fade" id="rfPModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Request For Proposal - RFP </h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Request For Proposal </h4>
+                <p>
+                 تقديم مقترح
+                </p>
+                <!-- PDF -->
+                <iframe src="HTML/iframe/06 - Request For Proposal (R.F.P)/RFP.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- RFA Modal -->
+<div class="modal fade" id="rfaModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Request For Approval - RFA </h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Request For Approval - RFA  </h4>
+                <p>
+                  طلب اعتماد مورد      
+                </p>
+                <!-- PDF -->
+                <iframe src="HTML/iframe/05 - Request For Approval (R.F.A)/RFA.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- MS Modal -->
+<div class="modal fade" id="msModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Material Submittal - MS </h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Material Submittal - MS </h4>
+                <p>
+                اعتماد خامات اوعينات
+                </p>
+                <!-- PDF -->
+                <iframe src="HTML/iframe/08 - Material Submittal (M.S)/MS.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- DS Modal -->
+<div class="modal fade" id="DSModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Document Submittal - DS </h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Document Submittal - DS </h4>
+                <p>
+                    طلب اعتماد 
+                </p>
+                <!-- PDF -->
+                <iframe src="HTML/iframe/03 - Document Submittal (D.S)/DS.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- QS Modal -->
+<div class="modal fade" id="qsModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Quantity Survey - QS </h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+
+
+
+                <h4>Quantity Survey - QS </h4>
+
+
+
+
+                <p>
+                  حصر الكميات
+                </p>
+
+                <!-- PDF -->
+                  <iframe src="HTML/iframe/10 - Quantities Submittal (Q.S)/QS.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CPR Modal -->
+<div class="modal fade" id="cprModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Concrete Pouring Request (CPR)</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+
+
+
+                <h4>Concrete Pouring Request </h4>
+
+
+
+
+                <p>
+                   اذن صب  او تصريح صب
+                </p>
+
+
+
+
+                <!-- PDF -->
+                  <iframe src="HTML/iframe/11 - Concrete Pouring Request (CPR)/CPR.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MOS Modal -->
+<div class="modal fade" id="MOSModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Method Of Statement - MOS</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+
+
+
+                <h4> Method Of Statement - MOS</h4>
+
+
+
+
+                <p>
+                   تقديم طريقه تنفيذ
+                </p>
+
+
+
+
+                <!-- PDF -->
+                  <iframe src="HTML/iframe/04 - Method Of Statement (M.O.S)/MOS.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TRT Modal -->
+<div class="modal fade" id="TRTModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Test Result - TRT</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+
+
+
+
+                <h4>Test Result - TRT </h4>
+
+
+
+
+                <p>
+                   نتائح اختبار تكسير المكعبات
+                </p>
+
+
+
+
+                <!-- PDF -->
+                  <iframe src="HTML/iframe/09 - Test Result (TRT)/TRT.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- NCR Modal -->
+<div class="modal fade" id="NCRModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Non-Conformance-Report - NCR </h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Non-Conformance-Report - NCR </h4>
+                <p>
+                  تقرير عدم المطابقة
+                </p>
+                <!-- PDF -->
+                  <iframe src="HTML/iframe/12 - NON CONFORMANCE REPORT (NCR)/NCR.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TRA Modal -->
+<div class="modal fade" id="TRAModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Transmittal - TRA </h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Transmittal - TRA </h4>
+                <p>
+                 مستند يقدم من الاستشاري للمقاول
+                </p>
+                <!-- PDF -->
+                  <iframe src="HTML/iframe/13 - Transmittal (TRA)/TRA.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    <h2 class="text-center mb-5">
+        🏗️ Reports
+    </h2>
+<div class="row">
+  <!-- Daily Report -->
+  <div class="col-4 col-lg-4 col-md-4 col-sm-4">
+      <div class="doc-card" data-bs-toggle="modal" data-bs-target="#DailyModal"></button>
+          <div class="doc-icon">❓</div>
+          <h4>Daily Report</h4>
+          <span>Daily Report</span>
+      </div>
+  </div>
+ <!-- Weakly Report -->
+ <div class="col-4 col-lg-4 col-md-4 col-sm-4">
+     <div class="doc-card" data-bs-toggle="modal" data-bs-target="#WeaklyModal"></button>
+         <div class="doc-icon">❓</div>
+         <h4>Weakly Report</h4>
+         <span>Weakly Report</span>
+     </div>
+ </div>
+  <!-- Monthly Report -->
+ <div class="col-4 col-lg-4 col-md-4 col-sm-4">
+     <div class="doc-card" data-bs-toggle="modal" data-bs-target="#MonthlyModal"></button>
+         <div class="doc-icon">❓</div>
+         <h4>Monthly Report</h4>
+         <span>Monthly Report</span>
+     </div>
+ </div>
+</DIV>
+
+<!-- DAILY Modal -->
+<div class="modal fade" id="DailyModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Daily Report - CDR</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4>DAILY REPORT</h4>
+                <p>
+                   تقرير يومس
+                </p>
+                <!-- PDF -->
+                  <iframe src="HTML/iframe/02 - Daily Reports/CDR.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Weakly Modal -->
+<div class="modal fade" id="WeaklyModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Weakly Report</h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4> Weakly Report</h4>
+                <p>
+                   تقرير اسبوعي
+                </p>
+                <!-- PDF -->
+                  <iframe src="HTML/iframe/02 - Daily Reports/CDR.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Monthly Modal -->
+<div class="modal fade" id="MonthlyModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Monthly Report </h5>
+                <button class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <h4>Monthly Report </h4>
+                <p>
+                   تقرير شهري
+                </p>
+                <!-- PDF -->
+                  <iframe src="HTML/iframe/02 - Daily Reports/CDR.pdf"
+                        width="100%"
+                        height="500">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function toggleTheme(btn){
+  document.body.classList.toggle("dark");
+  // لو في دارك مود
+  if(document.body.classList.contains("dark")){
+    btn.innerText = "Light Mode";
+    localStorage.setItem("theme","dark");
+  } 
+  else {
+    btn.innerText = "Dark Mode";
+    localStorage.setItem("theme","light");
+  }
+}
+
+// تشغيل الحالة عند فتح الصفحة + تحديث النص
+window.onload = function(){
+    const btn = document.querySelector(".nav-link[onclick]");
+  if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark");
+    if(btn) btn.innerText = "Light Mode";
+  } 
+  else {
+    if(btn) btn.innerText = "Dark Mode";
+  }
+}
+</script>
+
+<!-- ===== FOOTER ===== -->
+<footer class="modern-footer" id="contact">
+
+  <div class="footer-content">
+
+    <h2>Contact Me</h2>
+
+    <p>
+      Feel free to contact me for Document Control,
+      Aconex Support, Archiving Systems, and Training Courses.
+    </p>
+
+    <div class="social-icons">
+
+      <a href="https://web.facebook.com/ahmedkhkh47" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <a href="https://wa.me/201156286464" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+
+      <a href="mailto:aragad477@gmail.com">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/ahmed-khalaf-dc/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+    </div>
+
+    <div class="footer-line"></div>
+
+    <span>
+      Ahmed Khalaf © Khalaf_DC | Mostanad Academy
+    </span>
+
+  </div>
+
+</footer>
+
+
+<script>
+document.querySelectorAll('.dropdown-btn').forEach(function(btn){
+    var content = btn.nextElementSibling;
+    if(content && content.classList.contains('dropdown-container')){
+        content.style.display='none';
+    }
+    btn.addEventListener('click',function(){
+        this.classList.toggle('active');
+        var c=this.nextElementSibling;
+        if(c && c.classList.contains('dropdown-container')){
+            c.style.display=(c.style.display==='block')?'none':'block';
+        }
+    });
+});
+</script>
+
+</body>
+</html>

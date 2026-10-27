@@ -1,0 +1,1850 @@
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ahmed Khalaf | Document Controller</title>
+
+<link href="Ahmed%20Khalaf%20_%20Document%20Controller_files/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="Ahmed%20Khalaf%20_%20Document%20Controller_files/bootstrap-icons.min.css">
+
+
+<link rel="stylesheet" href="Ahmed%20Khalaf%20_%20Document%20Controller_files/all.min.css">
+
+<style>
+
+/* ===== THEME ===== */
+:root{
+  --bg:#ffffff;
+  --text:#0f172a;
+  --card:#f1f5f9;
+  --primary:#2563eb;
+  --green:#22c55e;
+}
+
+body.dark{
+  --bg:#0f172a;
+  --text:#ffffff;
+  --card:#1e293b;
+}
+
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.4s;
+}
+
+/* ===== DARK TEXT FIX ===== */
+body.dark p,
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark li,
+body.dark a{
+  color:#fff !important;
+ 
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:999;
+  background:rgba(255,255,255,0.9);
+  backdrop-filter: blur(10px);
+  transition:0.3s;
+}
+
+body.dark .navbar{
+  background:rgba(15,23,42,0.9);
+}
+
+/* ===== NAV HOVER GREEN BORDER ===== */
+.navbar .nav-link{
+  padding:8px 12px;
+  border-radius:10px;
+  transition:0.3s;
+  border:1px solid transparent;
+}
+/* NAVBAR HOVER COLOR */
+
+.navbar .nav-link:hover{
+  border:1px solid #00e1ffe8; /* اللون الجديد */
+  color:#00d9fff8 !important;
+}
+
+
+/* ===== HERO ===== */
+.hero{
+  padding:120px 8% 60px;
+}
+
+.hero-box{
+  display:flex;
+  flex-wrap:wrap;
+  gap:30px;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.hero-text{
+  flex:1;
+  min-width:280px;
+}
+
+.hero-text h1{
+  font-size:48px;
+  font-weight:700;
+}
+
+.hero-text span{
+  color:var(--primary);
+}
+
+.hero-card{
+  flex:1;
+  min-width:280px;
+  background:var(--card);
+  padding:25px;
+  border-radius:15px;
+}
+
+/* ===== SECTIONS CENTER TITLES ===== */
+section h2{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+/* ===== CARDS ===== */
+.card{
+  background:var(--card);
+  border:none;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+}
+
+/* ===== SKILLS CENTER ===== */
+.skills{
+  text-align:center;
+}
+
+.skill{
+  display:inline-block;
+  padding:8px 14px;
+  margin:5px;
+  border-radius:10px;
+  background:var(--card);
+  transition:0.3s;
+}
+
+.skill:hover{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* ===== CONTACT CENTER FIX ===== */
+.contact{
+  text-align:center;
+  padding:40px;
+  background:var(--card);
+  border-radius:20px;
+  margin-top:30px;
+}
+
+/* ===== FLOAT BUTTONS ===== */
+.contact-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.contact-btn{
+  padding:12px 14px;
+  border-radius:12px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.whatsapp{ background:#22c55e; }
+.email{ background:#2563eb; }
+
+
+/* servec card> */
+
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin-top:18px;
+  justify-content:center;
+}
+
+.service-card{
+  height:270px;
+  border-radius:18px;
+  position:relative;
+  overflow:hidden;
+  background-size:cover;
+  background-position:center;
+  cursor:pointer;
+  transition:0.4s ease;
+  transform:scale(1);
+}
+
+/* overlay عشان النص يبان */
+.service-card .overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.55);
+  transition:0.4s;
+}
+
+/* النص */
+.service-card .content{
+  position:absolute;
+  bottom:15px;
+  width:100%;
+  text-align:center;
+  color:#fff;
+  transition:0.4s;
+}
+
+.service-card h2{
+  margin:0;
+  font-size:20px;
+  color:#4cf100f8;
+  font-style: italic;
+}
+
+.service-card p{
+  font-size:12px;
+  opacity:0.8;
+}
+
+/* HOVER EFFECT */
+.service-card:hover{
+  transform:scale(1.08);
+}
+
+.service-card:hover .overlay{
+  background:rgba(0,0,0,0.25);
+}
+
+.service-card:hover h2,
+.service-card:hover p{
+  color:#38bdf3 /* أزرق */
+  font-size:22px;
+}
+
+
+/* FIX TEXT IN DARK MODE */
+
+body.dark .card p,
+body.dark .card h3,
+body.dark .card li,
+body.dark .hero-card p,
+body.dark .hero-card h3,
+body.dark .hero-card li{
+  color:#ffffff !important;
+}
+/* TITLES COLOR IN DARK MODE ONLY */
+
+body.dark h1 span,
+body.dark h2,
+body.dark h3,
+body.dark h1
+
+{
+
+  color:#38bdf3 !important;
+}
+
+
+
+.skills-section{
+  padding:60px 8%;
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.skill-card{
+  background:var(--card);
+  padding:25px;
+  border-radius:18px;
+  text-align:center;
+  transition:0.4s;
+  border:1px solid rgba(255,255,255,0.08);
+  position:relative;
+  overflow:hidden;
+}
+
+/* Hover effect احترافي */
+.skill-card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+  border-color:#38bdf3;
+}
+
+/* icon */
+.skill-card .icon{
+  font-size:35px;
+  margin-bottom:10px;
+}
+
+/* title */
+.skill-card h3{
+  color:#38bdf3;
+  margin-bottom:10px;
+}
+
+/* description */
+.skill-card p{
+  font-size:13px;
+  opacity:0.8;
+}
+
+
+/* ===== MODERN SERVICES ===== */
+
+.services-modern{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
+  margin-top:40px;
+}
+
+.service-modern-card{
+  background:rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:20px;
+  padding:25px;
+  text-align:center;
+  transition:0.4s;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Glow effect */
+.service-modern-card::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:linear-gradient(45deg,#38bdf3,#22c55e,#2563eb);
+  opacity:0;
+  transition:0.4s;
+  z-index:-1;
+}
+
+.service-modern-card:hover::before{
+  opacity:0.2;
+}
+
+.service-modern-card:hover{
+  transform:translateY(-10px) scale(1.02);
+  border-color:#38bdf3;
+}
+
+/* ICON */
+.service-modern-card .icon{
+  font-size:38px;
+  margin-bottom:15px;
+}
+
+/* TITLE */
+.service-modern-card h3{
+  color:#38bdf3;
+  margin-bottom:10px;
+}
+
+/* TEXT */
+.service-modern-card p{
+  font-size:13px;
+  color:#cbd5e1;
+  line-height:1.6;
+}
+
+/* FOOTER TEXT */
+.service-modern-card span{
+  display:block;
+  margin-top:12px;
+  font-size:11px;
+  opacity:0.7;
+}
+
+
+/* ===== MODERN FOOTER ===== */
+
+.modern-footer{
+  margin-top:80px;
+  padding:60px 20px;
+  background:linear-gradient(180deg,#0f172a,#020617);
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.footer-content h2{
+  font-size:38px;
+  margin-bottom:15px;
+  color:#38bdf3;
+}
+
+.footer-content p{
+  color:#cbd5e1;
+  max-width:600px;
+  margin:auto;
+  line-height:1.8;
+  margin-bottom:35px;
+}
+
+/* ICONS */
+
+.social-icons{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.social-icons a{
+  width:55px;
+  height:55px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:#111827;
+  color:#38bdf3;
+  font-size:22px;
+  text-decoration:none;
+  transition:0.4s ease;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* HOVER */
+
+.social-icons a:hover{
+  transform:translateY(-8px) scale(1.1);
+  background:#38bdf3;
+  color:#0f172a;
+  box-shadow:0 10px 30px rgba(56,189,243,0.35);
+}
+
+/* LINE */
+
+.footer-line{
+  width:120px;
+  height:2px;
+  background:#38bdf3;
+  margin:35px auto 20px;
+  border-radius:20px;
+}
+
+/* COPYRIGHT */
+
+.footer-content span{
+  color:#94a3b8;
+  font-size:16px;
+}
+
+/* ===== FOOTER LIGHT MODE ===== */
+
+.modern-footer{
+  background:linear-gradient(180deg,#f8fafc,#e2e8f0);
+  transition:0.4s;
+}
+
+.footer-content h2{
+  color:#0f172a;
+}
+
+.footer-content p,
+.footer-content span{
+  color:#334155;
+}
+
+.social-icons a{
+  background:#ffffff;
+  color:#2563eb;
+  border:1px solid rgba(0,0,0,0.08);
+}
+
+/* ===== DARK MODE ===== */
+
+body.dark .modern-footer{
+  background:linear-gradient(180deg,#0f172a,#020617);
+}
+
+body.dark .footer-content h2{
+  color:#38bdf3;
+}
+
+body.dark .footer-content p,
+body.dark .footer-content span{
+  color:#cbd5e1;
+}
+
+body.dark .social-icons a{
+  background:#111827;
+  color:#38bdf3;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* HOVER ثابت */
+
+.social-icons a:hover{
+  transform:translateY(-8px) scale(1.1);
+  background:#38bdf3 !important;
+  color:#0f172a !important;
+  box-shadow:0 10px 30px rgba(56,189,243,0.35);
+}
+
+
+
+
+
+/* ===== FOOTER LIGHT MODE ===== */
+
+.modern-footer{
+  background:linear-gradient(180deg,#f8fafc,#e2e8f0);
+  transition:0.4s;
+}
+
+.footer-content h2{
+  color:#0f172a;
+}
+
+.footer-content p,
+.footer-content span{
+  color:#334155;
+}
+
+.social-icons a{
+  background:#ffffff;
+  color:#2563eb;
+  border:1px solid rgba(0,0,0,0.08);
+}
+
+/* ===== DARK MODE ===== */
+
+body.dark .modern-footer{
+  background:linear-gradient(180deg,#0f172a,#020617);
+}
+
+body.dark .footer-content h2{
+  color:#38bdf3;
+}
+
+body.dark .footer-content p,
+body.dark .footer-content span{
+  color:#cbd5e1;
+}
+
+body.dark .social-icons a{
+  background:#111827;
+  color:#38bdf3;
+  border:1px solid rgba(255,255,255,0.08);
+}
+
+/* HOVER ثابت */
+
+.social-icons a:hover{
+  transform:translateY(-8px) scale(1.1);
+  background:#38bdf3 !important;
+  color:#0f172a !important;
+  box-shadow:0 10px 30px rgba(56,189,243,0.35);
+}
+
+
+/* ===== COURSES SECTION ===== */
+
+.modern-courses{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+  margin-top:40px;
+}
+
+/* ===== COURSE CARD ===== */
+
+.modern-course-card{
+  position:relative;
+  height:420px;
+  border-radius:24px;
+  overflow:hidden;
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  align-items:flex-end;
+
+  transition:0.5s ease;
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* OVERLAY */
+
+.modern-course-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.92),
+    rgba(0,0,0,0.25)
+  );
+
+  transition:0.4s ease;
+}
+
+/* CONTENT */
+
+.modern-course-content{
+  position:relative;
+  z-index:2;
+  padding:28px;
+  width:100%;
+}
+
+/* TAG */
+
+.modern-tag{
+  display:inline-block;
+
+  background:#38bdf3;
+  color:#0f172a;
+
+  padding:7px 15px;
+
+  border-radius:30px;
+
+  font-size:12px;
+  font-weight:700;
+
+  margin-bottom:18px;
+}
+
+/* TITLE */
+
+.modern-course-content h3{
+  color:#ffffff;
+  font-size:26px;
+  margin-bottom:14px;
+  transition:0.3s;
+}
+
+/* TEXT */
+
+.modern-course-content p{
+  color:#e2e8f0;
+  line-height:1.8;
+  font-size:14px;
+  margin-bottom:24px;
+}
+
+/* BUTTON */
+
+.modern-btn{
+  display:inline-block;
+
+  padding:11px 20px;
+
+  border-radius:12px;
+
+  background:#38bdf3;
+  color:#0f172a;
+
+  text-decoration:none;
+  font-weight:600;
+
+  transition:0.3s ease;
+}
+
+.modern-btn:hover{
+  background:#ffffff;
+  color:#0f172a;
+}
+
+/* HOVER */
+
+.modern-course-card:hover{
+  transform:translateY(-12px) scale(1.02);
+
+  box-shadow:0 15px 45px rgba(56,189,243,0.28);
+}
+
+.modern-course-card:hover::before{
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.7),
+    rgba(0,0,0,0.1)
+  );
+}
+
+.modern-course-card:hover h3{
+  color:#38bdf3;
+}
+
+/* ===== LIGHT MODE ===== */
+
+body:not(.dark) .modern-course-card{
+  border:1px solid rgba(0,0,0,0.08);
+}
+
+body:not(.dark) .modern-course-card::before{
+  background:linear-gradient(
+    to top,
+    rgba(255,255,255,0.94),
+    rgba(255,255,255,0.25)
+  );
+}
+
+body:not(.dark) .modern-course-content h3{
+  color:#0f172a;
+}
+
+body:not(.dark) .modern-course-content p{
+  color:#334155;
+}
+
+body:not(.dark) .modern-btn{
+  color:#ffffff;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:768px){
+
+  .modern-course-card{
+    height:360px;
+  }
+
+  .modern-course-content h3{
+    font-size:22px;
+  }
+
+}
+
+
+
+/* ===== REVIEWS SECTION ===== */
+
+.reviews-section{
+  padding:90px 8%;
+}
+
+/* GRID */
+
+.reviews-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+}
+
+/* CARD */
+
+.review-card{
+  background:rgba(255,255,255,0.04);
+
+  border:1px solid rgba(255,255,255,0.08);
+
+  border-radius:24px;
+
+  padding:30px;
+
+  backdrop-filter:blur(12px);
+
+  transition:0.4s ease;
+}
+
+/* HOVER */
+
+.review-card:hover{
+  transform:translateY(-10px);
+
+  border-color:#38bdf3;
+
+  box-shadow:0 15px 40px rgba(56,189,243,0.15);
+}
+
+/* TOP */
+
+.review-top{
+  display:flex;
+  align-items:center;
+  gap:15px;
+
+  margin-bottom:22px;
+}
+
+/* IMAGE */
+
+.review-top img{
+  width:70px;
+  height:70px;
+
+  border-radius:50%;
+
+  object-fit:cover;
+
+  border:3px solid #38bdf3;
+}
+
+/* NAME */
+
+.review-top h3{
+  margin:0;
+  font-size:20px;
+}
+
+/* JOB */
+
+.review-top span{
+  color:#94a3b8;
+  font-size:13px;
+}
+
+/* TEXT */
+
+.review-card p{
+  line-height:1.9;
+  color:#cbd5e1;
+
+  margin-bottom:20px;
+}
+
+/* STARS */
+
+.stars{
+  color:#facc15;
+  font-size:20px;
+  letter-spacing:3px;
+}
+
+/* LIGHT MODE */
+
+body:not(.dark) .review-card{
+  background:#ffffff;
+  border:1px solid rgba(0,0,0,0.08);
+}
+
+body:not(.dark) .review-card p{
+  color:#334155;
+}
+
+body:not(.dark) .review-top span{
+  color:#64748b;
+}
+
+
+
+
+/* ===== LEARNING PATH ===== */
+
+.learning-section{
+  padding:80px 8%;
+}
+
+.timeline{
+  position:relative;
+  max-width:900px;
+  margin:auto;
+}
+
+/* الخط العمودي */
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  width:3px;
+  height:100%;
+  background:#38bdf3;
+  transform:translateX(-50%);
+}
+
+/* العنصر */
+.timeline-item{
+  position:relative;
+  width:50%;
+  padding:20px 40px;
+}
+
+/* يمين وشمال */
+.timeline-item:nth-child(odd){
+  left:0;
+  text-align:right;
+}
+
+.timeline-item:nth-child(even){
+  left:50%;
+  text-align:left;
+}
+
+/* النقطة */
+.dot{
+  width:16px;
+  height:16px;
+  background:#38bdf3;
+  border-radius:50%;
+  position:absolute;
+  top:30px;
+  right:-8px;
+  box-shadow:0 0 10px #38bdf3;
+}
+
+.timeline-item:nth-child(even) .dot{
+  left:-8px;
+}
+
+/* الكارت */
+.timeline-card{
+  background:var(--card);
+  padding:20px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,0.08);
+  transition:0.3s;
+}
+
+.timeline-card:hover{
+  transform:scale(1.03);
+  box-shadow:0 10px 30px rgba(56,189,243,0.2);
+}
+
+.timeline-card h3{
+  color:#38bdf3;
+  margin-bottom:10px;
+}
+
+/* DARK MODE SUPPORT */
+body.dark .timeline-card{
+  background:#1e293b;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .timeline::before{
+    left:10px;
+  }
+
+  .timeline-item{
+    width:100%;
+    padding-left:40px;
+    padding-right:10px;
+    text-align:left !important;
+    left:0 !important;
+  }
+
+  .dot{
+    left:0 !important;
+    right:auto !important;
+  }
+
+}
+
+
+
+
+
+/* ===== CINEMATIC INTRO ===== */
+#intro{
+  position:fixed;
+  inset:0;
+  background:#0a0f1c;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:99999;
+  flex-direction:column;
+  overflow:hidden;
+}
+
+/* خلفية cinematic glow */
+#intro::before{
+  content:"";
+  position:absolute;
+  width:200%;
+  height:200%;
+  background:radial-gradient(circle,#38bdf3 0%,transparent 60%);
+  animation:moveGlow 4s ease-in-out infinite;
+  opacity:0.2;
+}
+
+.intro-content{
+  text-align:center;
+  animation:zoomIn 1.2s ease;
+  position:relative;
+  z-index:2;
+}
+
+/* كتابة متحركة */
+.typing{
+  font-size:42px;
+  color:#38bdf3;
+  letter-spacing:3px;
+  overflow:hidden;
+  white-space:nowrap;
+  border-right:3px solid #38bdf3;
+  width:0;
+  animation:typing 2s steps(12) forwards, blink 0.7s infinite;
+}
+
+/* الصورة */
+.intro-image img{
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  margin-top:20px;
+  border:3px solid #38bdf3;
+  object-fit:cover;
+  opacity:0;
+  animation:fadeIn 1s ease forwards;
+  animation-delay:2.2s;
+}
+
+/* زر */
+.intro-btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 18px;
+  background:#2563eb;
+  color:#fff;
+  border-radius:10px;
+  text-decoration:none;
+  opacity:0;
+  animation:fadeIn 1s ease forwards;
+  animation-delay:2.6s;
+  transition:0.3s;
+}
+
+.intro-btn:hover{
+  transform:scale(1.05);
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes typing{
+  from{width:0;}
+  to{width:220px;}
+}
+
+@keyframes blink{
+  50%{border-color:transparent;}
+}
+
+@keyframes fadeIn{
+  to{opacity:1;}
+}
+
+@keyframes zoomIn{
+  from{transform:scale(1.2); opacity:0;}
+  to{transform:scale(1); opacity:1;}
+}
+
+@keyframes moveGlow{
+  0%{transform:translate(-20%,-20%);}
+  50%{transform:translate(20%,20%);}
+  100%{transform:translate(-20%,-20%);}
+
+}
+body.dark .footer-cv-btn{
+  background:#38bdf3;
+  color:#0f172a;
+}
+
+</style>
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  setTimeout(() => {
+    const intro = document.getElementById("intro");
+
+    intro.style.transition = "1s ease";
+    intro.style.opacity = "0";
+    intro.style.transform = "scale(1.1)";
+
+    setTimeout(() => {
+      intro.style.display = "none";
+    }, 1000);
+
+  }, 3000); // مدة السينمائي (4 ثواني)
+
+});
+</script>
+
+
+
+</head>
+
+<body class="dark">
+ 
+ <div id="intro" style="transition: 1s; opacity: 0; transform: scale(1.1); display: none;">
+
+  <div class="intro-content">
+
+    <h1 class="typing">Khalaf_DC</h1>
+
+    <div class="intro-image">
+      <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/1776864376129.jpg" alt="Profile">
+    </div>
+
+    <a href="https://www.linkedin.com/in/ahmed-khalaf-dc/" target="_blank" class="intro-btn">
+      LinkedIn Profile
+    </a>
+
+  </div>
+
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg px-3 shadow-sm">
+
+  <a class="navbar-brand fw-bold">
+   <h2>
+    Mostanad Academy |  مستند أكاديمي 
+  </h2>
+  </a>
+
+  <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+    ☰
+  </button>
+
+  <div class="collapse navbar-collapse" id="nav">
+
+    <ul class="navbar-nav ms-auto">
+      <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="#Services">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+      <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+
+<li class="nav-item">
+  <a class="nav-link" href="#" onclick="toggleTheme(this)">Light Mode</a>
+</li>
+
+  </ul></div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+  <div class="hero-box">
+
+    <div class="hero-text">
+      <h1><span>Ahmed Khalaf</span><br>Document Controller  </h1>
+      
+      <p>
+        Professional Document Controller with strong experience in document management,
+        archiving systems, Aconex workflows, project coordination, and infrastructure documentation.
+        Passionate about organization, process improvement, and digital transformation.
+      </p>
+    </div>
+
+    <div class="hero-card">
+      <h3>Professional Summary</h3>
+      <ul>
+        <li>✔ Document Control Specialist</li>
+        <li>✔ Aconex &amp; EDMS Experience</li>
+        <li>✔ Infrastructure Project Documentation</li>
+        <li>✔ Archiving &amp; Tracking Systems</li>
+        <li>✔ Microsoft Office &amp; Excel VBA</li>
+        <li>✔ Team Coordination &amp; Reporting</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ABOUT -->
+<section id="about" class="container py-5">
+
+  <h1 class="text-center mb-5">About Me</h1>
+
+  <div class="row align-items-center g-4">
+
+    <!-- TEXT -->
+    <div class="col-md-6 text-center text-md-start">
+
+      <div class="card p-4 shadow-sm">
+        <h3>
+        I specialize in managing engineering documents, workflows, and project records.
+        I focus on improving documentation processes and ensuring efficient communication between teams.
+        </h3>
+      </div>
+
+    </div>
+
+    <!-- ANIMATED IMAGE -->
+    <div class="col-md-6 text-center">
+
+     <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/photo-1586281380349-632531db7ed4.jpg" alt="Document Archiving" class="img-fluid rounded-4 shadow" style="max-height:350px; object-fit:cover;">
+
+    </div>
+
+  </div>
+
+  
+  
+  
+</section>
+
+
+
+<!-- Services -->
+<section id="Services">
+  <h1 class="text-center mb-5">Services</h1>
+
+  <div class="services-modern">
+
+    <!-- Card 1 -->
+    <div class="service-modern-card">
+      <div class="icon">📄</div>
+      <h3>Document Control</h3>
+      <p>Managing submissions, transmittals, revisions &amp; approvals professionally.</p>
+      <span>Mostanad Academy | مستند أكاديمي</span>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="service-modern-card">
+      <div class="icon">🗂️</div>
+      <h3>Archiving Systems</h3>
+      <p>Building structured digital &amp; physical archiving systems for projects.</p>
+      <span>Mostanad Academy | مستند أكاديمي</span>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="service-modern-card">
+      <div class="icon">🏗️</div>
+      <h3>Aconex Support</h3>
+      <p>Workflow support, submissions, correspondence &amp; tracking system handling.</p>
+      <span>Mostanad Academy | مستند أكاديمي</span>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="service-modern-card">
+      <div class="icon">⚙️</div>
+      <h3>Excel Automation</h3>
+      <p>Smart dashboards, logs &amp; VBA automation for document workflows.</p>
+      <span>Mostanad Academy | مستند أكاديمي</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="courses">
+
+  <h1 class="text-center mb-5">
+    Courses | الدورات التدريبية
+  </h1>
+
+  <div class="modern-courses">
+
+    <!-- COURSE 1 -->
+    <div class="modern-course-card" style="background-image:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');">
+
+      <div class="modern-course-content">
+
+        <span class="modern-tag">
+          Mostanad Academy
+        </span>
+
+        <h3>Document Control Basics</h3>
+
+        <p>
+          Learn document workflows,
+          transmittals, tracking systems,
+          and documentation standards.
+        </p>
+
+        <a href="#" class="modern-btn">
+          Learn More
+        </a>
+
+      </div>
+    </div>
+
+    <!-- COURSE 2 -->
+    <div class="modern-course-card" style="background-image:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3');">
+
+      <div class="modern-course-content">
+
+        <span class="modern-tag">
+          Mostanad Academy
+        </span>
+
+        <h3>Aconex Training</h3>
+
+        <p>
+          Practical Aconex workflows,
+          submissions, reporting,
+          and correspondence management.
+        </p>
+
+        <a href="#" class="modern-btn">
+          Learn More
+        </a>
+
+      </div>
+    </div>
+
+    <!-- COURSE 3 -->
+    <div class="modern-course-card" style="background-image:url('https://images.unsplash.com/photo-1551288049-bebda4e38f71');">
+
+      <div class="modern-course-content">
+
+        <span class="modern-tag">
+          Mostanad Academy
+        </span>
+
+        <h3>Excel VBA Automation</h3>
+
+        <p>
+          Build smart tracking systems
+          and automate reports
+          professionally using VBA.
+        </p>
+
+        <a href="#" class="modern-btn">
+          Learn More
+        </a>
+
+      </div>
+    </div>
+
+    <!-- COURSE 4 -->
+    <div class="modern-course-card" style="background-image:url('https://images.unsplash.com/photo-1521791136064-7986c2920216');">
+
+      <div class="modern-course-content">
+
+        <span class="modern-tag">
+          Mostanad Academy
+        </span>
+
+        <h3>Archiving Systems</h3>
+
+        <p>
+          Build efficient digital
+          and physical archiving systems
+          for engineering projects.
+        </p>
+
+        <a href="#" class="modern-btn">
+          Learn More
+        </a>
+
+      </div>
+    </div>
+
+    <!-- COURSE 5 -->
+    <div class="modern-course-card" style="background-image:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d');">
+
+      <div class="modern-course-content">
+
+        <span class="modern-tag">
+          Mostanad Academy
+        </span>
+
+        <h3>Project Workflow</h3>
+
+        <p>
+          Manage revisions, approvals,
+          submissions and project
+          documentation professionally.
+        </p>
+
+        <a href="#" class="modern-btn">
+          Learn More
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="skills-section">
+
+  <h1 class="text-center mb-5">Skills</h1>
+
+  <div class="skills-grid">
+
+    <div class="skill-card">
+      <div class="icon">📄</div>
+      <h3>Document Control</h3>
+      <p>Managing project documentation and workflows</p>
+    </div>
+
+    <div class="skill-card">
+      <div class="icon">🏗️</div>
+      <h3>Aconex</h3>
+      <p>Handling submissions and correspondence systems</p>
+    </div>
+
+    <div class="skill-card">
+      <div class="icon">📊</div>
+      <h3>Excel VBA</h3>
+      <p>Automation and smart reporting systems</p>
+    </div>
+
+    <div class="skill-card">
+      <div class="icon">💼</div>
+      <h3>Microsoft Office</h3>
+      <p>Professional documentation tools</p>
+    </div>
+
+    <div class="skill-card">
+      <div class="icon">🗂️</div>
+      <h3>Archiving Systems</h3>
+      <p>Organizing digital &amp; physical records</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STUDENTS REVIEWS -->
+<section id="reviews" class="reviews-section">
+
+  <h1 class="text-center mb-5">
+    Students Reviews | آراء الطلاب
+  </h1>
+
+  <div class="reviews-grid">
+
+    <!-- REVIEW 1 -->
+    <div class="review-card">
+
+      <div class="review-top">
+        <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/32.jpg">
+
+        <div>
+          <h3>Mohamed Hassan</h3>
+          <span>Document Controller</span>
+        </div>
+      </div>
+
+      <p>
+        The Aconex training was extremely practical
+        and helped me understand workflows professionally.
+      </p>
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+    </div>
+
+    <!-- REVIEW 2 -->
+    <div class="review-card">
+
+      <div class="review-top">
+        <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/44.jpg">
+
+        <div>
+          <h3>Sara Ahmed</h3>
+          <span>Project Coordinator</span>
+        </div>
+      </div>
+
+      <p>
+        One of the best Document Control courses.
+        The explanation was simple and very organized.
+      </p>
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+    </div>
+
+    <!-- REVIEW 3 -->
+    <div class="review-card">
+
+      <div class="review-top">
+        <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/75.jpg">
+
+        <div>
+          <h3>Omar Khaled</h3>
+          <span>Site Engineer</span>
+        </div>
+      </div>
+
+      <p>
+        Excel VBA automation saved me huge time
+        in reports and tracking logs.
+      </p>
+
+      <div class="stars">
+        ★★★★★
+      </div>
+
+    </div>
+<div class="review-card">
+  <div class="review-top">
+    <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/32.jpg">
+    <div>
+      <h3>Medhat Omar</h3>
+      <span>Document Controller</span>
+    </div>
+  </div>
+  <p>
+    The course helped me understand Document Control in a very professional way.
+  </p>
+  <div class="stars">★★★★★</div>
+</div>
+
+<!-- 2 -->
+<div class="review-card">
+  <div class="review-top">
+    <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/41.jpg">
+    <div>
+      <h3>Mohamed Ayman</h3>
+      <span>Aconex Trainee</span>
+    </div>
+  </div>
+  <p>
+    Very practical explanation especially for Aconex workflows and reporting.
+  </p>
+  <div class="stars">★★★★★</div>
+</div>
+
+<!-- 3 -->
+<div class="review-card">
+  <div class="review-top">
+    <!-- محجبة -->
+    <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/photo-1544005313-94ddf0286df2.jpg">
+    <div>
+      <h3>Manal Mohamed</h3>
+      <span>Engineering Student</span>
+    </div>
+  </div>
+  <p>
+    Great explanation and very helpful for organizing documents and archiving systems.
+  </p>
+  <div class="stars">★★★★★</div>
+</div>
+
+<!-- 4 -->
+<div class="review-card">
+  <div class="review-top">
+    <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/67.jpg">
+    <div>
+      <h3>Hossam Gamal</h3>
+      <span>Project Coordinator</span>
+    </div>
+  </div>
+  <p>
+    Very professional content with real practical applications.
+  </p>
+  <div class="stars">★★★★★</div>
+</div>
+
+<!-- 5 -->
+<div class="review-card">
+  <div class="review-top">
+    <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/21.jpg">
+    <div>
+      <h3>Zakaria Saber</h3>
+      <span>Document Controller</span>
+    </div>
+  </div>
+  <p>
+    Excellent structured training with strong practical value.
+  </p>
+  <div class="stars">★★★★★</div>
+</div>
+
+<!-- 6 -->
+<div class="review-card">
+  <div class="review-top">
+    <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/15.jpg">
+    <div>
+      <h3>Shaaban Mahmoud</h3>
+      <span>Site Engineer</span>
+    </div>
+  </div>
+  <p>
+    Helped me a lot in tracking documents and project archiving systems.
+  </p>
+  <div class="stars">★★★★★</div>
+</div>
+
+<!-- 7 -->
+<div class="review-card">
+  <div class="review-top">
+    <!-- محجبة -->
+    <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/photo-1488426862026-3ee34a7d66df.jpg">
+    <div>
+      <h3>Shorouk Mohamed</h3>
+      <span>Training Student</span>
+    </div>
+  </div>
+  <p>
+    The explanation is very clear and suitable for beginners and professionals.
+  </p>
+  <div class="stars">★★★★★</div>
+</div>
+
+<!-- 8 -->
+<div class="review-card">
+  <div class="review-top">
+    <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/52.jpg">
+    <div>
+      <h3>Ali Maher</h3>
+      <span>Project Engineer</span>
+    </div>
+  </div>
+  <p>
+    Improved my document management skills significantly in real projects.
+  </p>
+  <div class="stars">★★★★★</div>
+</div>
+
+<!-- 9 -->
+<div class="review-card">
+  <div class="review-top">
+    <img src="Ahmed%20Khalaf%20_%20Document%20Controller_files/73.jpg">
+    <div>
+      <h3>Elsayed Mahmoud</h3>
+      <span>EDMS User</span>
+    </div>
+  </div>
+  <p>
+    One of the best courses for EDMS and professional archiving systems.
+  </p>
+  <div class="stars">★★★★★</div>
+</div>
+
+    
+
+</div></section>
+
+
+
+
+<!-- LEARNING PATH -->
+<section id="learning" class="learning-section">
+
+  <h1 class="text-center mb-5">
+    Learning Path | مسار تعلم Document Control
+  </h1>
+
+  <div class="timeline">
+
+    <!-- 1 -->
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="timeline-card">
+        <h3>Basics of Document Control</h3>
+        <p>
+          Understanding document lifecycle, numbering systems, revisions, and control principles.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="timeline-card">
+        <h3>Document Management Systems</h3>
+        <p>
+          Learning EDMS platforms like Aconex, submittals, workflows, and correspondence.
+        </p>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="timeline-card">
+        <h3>Project Documentation</h3>
+        <p>
+          Handling drawings, technical documents, transmittals, and approval cycles.
+        </p>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="timeline-card">
+        <h3>Archiving Systems</h3>
+        <p>
+          Building structured digital &amp; physical archiving systems for engineering projects.
+        </p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="timeline-item">
+      <div class="dot"></div>
+      <div class="timeline-card">
+        <h3>Advanced Excel &amp; Reporting</h3>
+        <p>
+          Using Excel VBA, logs, dashboards, and automated tracking systems.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="Ahmed%20Khalaf%20_%20Document%20Controller_files/bootstrap.bundle.min.js"></script>
+<!--
+<script>
+function toggleTheme(){
+  document.body.classList.toggle("dark");
+}
+</script>
+-->
+<script>
+function toggleTheme(btn){
+
+  document.body.classList.toggle("dark");
+
+  // لو في دارك مود
+  if(document.body.classList.contains("dark")){
+    btn.innerText = "Light Mode";
+    localStorage.setItem("theme","dark");
+  } 
+  else {
+    btn.innerText = "Dark Mode";
+    localStorage.setItem("theme","light");
+  }
+}
+
+// تشغيل الحالة عند فتح الصفحة + تحديث النص
+window.onload = function(){
+
+  const btn = document.querySelector(".nav-link[onclick]");
+
+  if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark");
+    if(btn) btn.innerText = "Light Mode";
+  } 
+  else {
+    if(btn) btn.innerText = "Dark Mode";
+  }
+}
+</script>
+
+
+
+
+
+<footer class="modern-footer" id="contact">
+
+
+
+
+
+  
+
+  <div class="footer-content  ">
+
+    <h2>Contact Me</h2>
+
+    <p>
+      Feel free to contact me for Document Control,
+      Aconex Support, Archiving Systems, and Training Courses.
+    </p>
+
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons">
+
+      <a href="file:///C:/Users/ahmed/Downloads/cv.pdf" download="" class="footer-cv-btn">
+        <i class="bi bi-download"></i>
+      </a>
+
+      <!-- Facebook -->
+      <a href="https://web.facebook.com/ahmedkhkh47" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/201156286464" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+
+      <!-- Gmail -->
+      <a href="mailto:aragad477@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/ahmed-khalaf-dc/" target="_blank">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+
+    </div>
+
+    <div class="footer-line"></div>
+
+    <span>
+      Ahmed Khalaf © Khalaf_DC | Mostanad Academy
+    </span>
+
+  </div>
+
+</footer>
+
+</body><!-- CONTACT --></html>
